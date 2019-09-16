@@ -2,7 +2,7 @@
 
 namespace FactoryDesignPattern
 {
-    class Truck : ITrasportSystem
+    class Truck : ITransportSystem
     {
         public string Mode { get ; set; }
 

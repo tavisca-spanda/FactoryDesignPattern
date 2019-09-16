@@ -1,6 +1,6 @@
 ﻿namespace FactoryDesignPattern
 {
-    enum TransportSystem
+    enum TransportSystemEnum
     {
         Truck=1,
         Ship

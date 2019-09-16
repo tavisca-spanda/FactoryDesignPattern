@@ -1,6 +1,6 @@
 ﻿namespace FactoryDesignPattern
 {
-    interface ITrasportSystem
+    interface ITransportSystem
     {
         void PrintType();
         string Mode { get; set; }

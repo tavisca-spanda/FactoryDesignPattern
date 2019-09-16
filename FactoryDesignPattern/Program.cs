@@ -10,14 +10,11 @@ namespace FactoryDesignPattern
 
             string input= Console.ReadLine();
 
-            string tMethod = Enum.GetName(typeof(TransportSystem), Int32.Parse(input));
+            string tMethod = Enum.GetName(typeof(TransportSystemEnum), Int32.Parse(input));
 
-            LogisticDecision logisticDecision = new LogisticDecision();
-            ITrasportSystem trasportSystem = logisticDecision.CreateLogistic(tMethod);
+            Logistic logistic = new Logistic();
 
-            Logistic logistic = new Logistic(trasportSystem);
-            
-            logistic.StateTransportMethod();
+            logistic.Initialize(tMethod);
 
             Console.ReadKey();
 

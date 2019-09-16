@@ -4,15 +4,29 @@ namespace FactoryDesignPattern
 {
     class Logistic
     {
-        private ITrasportSystem TrasportSystem;
-        public Logistic(ITrasportSystem tSystem)
+        private TransportSystemCreator trasportSystemCreator;
+        public void Initialize(string tSystem)
         {
-            TrasportSystem = tSystem;
-            
+            if(tSystem== "Truck")
+            {
+                trasportSystemCreator = new TruckCreator();
+
+            }
+
+            if (tSystem == "Ship")
+            {
+                trasportSystemCreator = new ShipCreator();
+
+            }
+
+            trasportSystemCreator.CreateTransportSystem();
+            trasportSystemCreator.PrintType();
+
         }
-        public void StateTransportMethod()
-        {
-            TrasportSystem.PrintType();
-        }
+
+
+
+
+        
     }
 }
